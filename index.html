@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSN Weather - Rajarhat, WB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__content">
+            <div class="header__left">
+                <div class="header__logo">
+                    <span class="logo-text">MSN Weather</span>
+                </div>
+            </div>
+            <div class="header__search">
+                <input type="text" class="search-input" placeholder="Enter a location">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar__nav">
+                <ul class="nav-list">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">🌤️ Current Weather</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">⏰ Hourly Forecast</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">📅 10-Day Forecast</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">🗺️ Weather Maps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">⚠️ Weather Alerts</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Tab Navigation - Always Visible -->
+            <div class="tab-nav">
+                <button class="tab-btn" data-tab="hourly">Hourly</button>
+                <button class="tab-btn active" data-tab="overview">Overview</button>
+                <button class="tab-btn" data-tab="maps">Maps</button>
+            </div>
+
+            <!-- Current Weather Display -->
+            <div class="weather-header">
+                <div class="current-temp">29°</div>
+                <div class="weather-info">
+                    <h1 class="location">Rajarhat, WB</h1>
+                    <p class="date-time">Saturday, June 14, 2025 • 5:21 AM</p>
+                    <p class="condition">Haze • Feels like 32°</p>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Hourly Tab -->
+                <div class="tab-panel" id="hourly-panel">
+                    <div class="hourly-forecast">
+                        <h2>Hourly Forecast</h2>
+                        <div class="hourly-timeline" id="hourly-timeline">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overview Tab -->
+                <div class="tab-panel active" id="overview-panel">
+                    <div class="overview-content">
+                        <section class="highlights">
+                            <h2>Today's Highlights</h2>
+                            <div class="highlights-grid">
+                                <div class="highlight-card">
+                                    <h3>UV Index</h3>
+                                    <div class="highlight-value">6</div>
+                                    <div class="highlight-desc">High</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <h3>Wind</h3>
+                                    <div class="highlight-value">15 km/h</div>
+                                    <div class="highlight-desc">NE</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <h3>Humidity</h3>
+                                    <div class="highlight-value">78%</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <h3>Visibility</h3>
+                                    <div class="highlight-value">8 km</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <h3>Air Pressure</h3>
+                                    <div class="highlight-value">1013 hPa</div>
+                                </div>
+                                <div class="highlight-card">
+                                    <h3>Sunrise & Sunset</h3>
+                                    <div class="highlight-value">05:28</div>
+                                    <div class="highlight-desc">18:15</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="forecast">
+                            <h2>10-Day Forecast</h2>
+                            <div class="forecast-list">
+                                <div class="forecast-item">
+                                    <span class="forecast-day">Today</span>
+                                    <span class="forecast-icon">⛅</span>
+                                    <span class="forecast-desc">Partly Cloudy</span>
+                                </div>
+                                <div class="forecast-item">
+                                    <span class="forecast-day">Tomorrow</span>
+                                    <span class="forecast-icon">⛈️</span>
+                                    <span class="forecast-desc">Thunderstorms</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Maps Tab -->
+                <div class="tab-panel" id="maps-panel">
+                    <div class="maps-content">
+                        <h2>Weather Maps</h2>
+                        <div class="map-container">
+                            <div class="map-placeholder">
+                                <div class="map-icon">🗺️</div>
+                                <p>Interactive Weather Map</p>
+                                <p class="map-subtitle">Temperature, precipitation, and wind overlays</p>
+                            </div>
+                            <div class="map-controls">
+                                <button class="map-control-btn active">Temperature</button>
+                                <button class="map-control-btn">Precipitation</button>
+                                <button class="map-control-btn">Wind</button>
+                                <button class="map-control-btn">Satellite</button>
+                            </div>
+                        </div>
+                        <p class="map-attribution">Map data © OpenStreetMap contributors</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Suggestions (Always Visible) -->
+        <aside class="suggestions-panel">
+            <h2>Weather-Based Suggestions</h2>
+            <div class="suggestions-list" id="suggestions-list">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </aside>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
